@@ -27,4 +27,9 @@ describe('Example', function () {
         cy
           .children1();
       })
+
+      it('closest', function () {
+        cy
+          .closest1();
+      })
   });
