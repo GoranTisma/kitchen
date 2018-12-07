@@ -73,3 +73,11 @@ Cypress.Commands.add('children1', function () {
       .closest('ul')
       .should('have.class', 'list-group');
   })
+
+  Cypress.Commands.add('eq1', function () {
+    cy
+      .get(".dropdown-toggle").click()
+      .get(".dropdown-menu li").eq(1).click()
+      .get('.traversal-list li')
+      .eq(1).should('contain', 'siamese');
+  })

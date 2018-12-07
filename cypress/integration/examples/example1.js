@@ -32,4 +32,9 @@ describe('Example', function () {
         cy
           .closest1();
       })
+
+      it('eq', function () {
+        cy
+          .eq1();
+      })
   });
