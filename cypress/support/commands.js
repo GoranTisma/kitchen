@@ -57,3 +57,11 @@ Cypress.Commands.add('root1', function () {
     cy.root().should('have.class', 'query-ul');
       })
   }) 
+
+Cypress.Commands.add('children1', function () {
+    cy
+      .contains('children').click()
+      .get('.traversal-breadcrumb')
+      .children('.active')
+      .should('contain', 'Data');
+  })
