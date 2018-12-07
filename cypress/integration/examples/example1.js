@@ -17,4 +17,9 @@ describe('Example', function () {
         cy
           .within1();
       })
+
+      it('root', function () {
+        cy
+          .root1();
+      })
   });

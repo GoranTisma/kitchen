@@ -32,14 +32,14 @@ Cypress.Commands.add('get1', function () {
       .get('#query-btn').should('contain', 'Button');
   })
 
-  Cypress.Commands.add('contain1', function () {
+Cypress.Commands.add('contain1', function () {
     cy
       .contains('get').click()
       .get('.query-list')
       .contains('apples').should('have.class', 'first');
   })
 
-  Cypress.Commands.add('within1', function () {
+Cypress.Commands.add('within1', function () {
     cy
       .contains('within').click()
       .get('#inputName').type('Goran')
@@ -48,3 +48,12 @@ Cypress.Commands.add('get1', function () {
       .get('#inputPassword').type('goran777');
       })
   })
+
+Cypress.Commands.add('root1', function () {
+    cy
+      .contains('root').click()
+      .root().should('match', 'html')
+      .get('.query-ul').within(() => {
+    cy.root().should('have.class', 'query-ul');
+      })
+  }) 
