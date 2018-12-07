@@ -12,4 +12,9 @@ describe('Example', function () {
         cy
           .contain1();
       })
+
+      it('within', function () {
+        cy
+          .within1();
+      })
   });
