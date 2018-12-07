@@ -38,3 +38,13 @@ Cypress.Commands.add('get1', function () {
       .get('.query-list')
       .contains('apples').should('have.class', 'first');
   })
+
+  Cypress.Commands.add('within1', function () {
+    cy
+      .contains('within').click()
+      .get('#inputName').type('Goran')
+      .get('.query-form').within(() => {
+    cy.get('#inputEmail').type('gorantisma@yahoo.com')
+      .get('#inputPassword').type('goran777');
+      })
+  })
