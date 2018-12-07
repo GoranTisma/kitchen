@@ -22,4 +22,9 @@ describe('Example', function () {
         cy
           .root1();
       })
+
+      it('children', function () {
+        cy
+          .children1();
+      })
   });
