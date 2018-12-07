@@ -31,6 +31,13 @@ Cypress.Commands.add('get1', function () {
       .get(".dropdown-menu li").first().click()
       .get('#query-btn').should('contain', 'Button');
   })
+  
+Cypress.Commands.add('contain1', function () {
+    cy
+      .contains('get').click()
+      .get('.query-list')
+      .contains('apples').should('have.class', 'first');
+  })
 
 Cypress.Commands.add('contain1', function () {
     cy

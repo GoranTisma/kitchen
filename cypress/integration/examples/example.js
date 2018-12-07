@@ -7,4 +7,9 @@ describe('Example', function () {
       cy
         .get1();
     })
-});
+
+      it('contain', function () {
+        cy
+          .contain1();
+      })
+  });
