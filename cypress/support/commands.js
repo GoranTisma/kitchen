@@ -23,3 +23,12 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('get1', function () {
+    cy
+      .get('.container h1').should('contain', 'Kitchen Sink')
+      .get(".dropdown-toggle").click()
+      .get(".dropdown-menu li").first().click()
+      .get('#query-btn').should('contain', 'Button');
+  })
+
