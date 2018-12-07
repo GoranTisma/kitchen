@@ -6,5 +6,5 @@ describe('Example', function () {
     it('get', function () {
         cy
           .get1();
-    })
+    });
     });
