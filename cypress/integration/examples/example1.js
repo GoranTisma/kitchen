@@ -37,4 +37,9 @@ describe('Example', function () {
         cy
           .eq1();
       })
+
+      it('filter', function () {
+        cy
+          .filter1();
+      })
   });

@@ -81,3 +81,10 @@ Cypress.Commands.add('children1', function () {
       .get('.traversal-list li')
       .eq(1).should('contain', 'siamese');
   })
+
+  Cypress.Commands.add('filter1', function () {
+    cy
+    .contains('filter').click()
+    .get('.traversal-nav li')
+    .filter('.active').should('contain', 'About');
+  })
