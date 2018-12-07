@@ -65,3 +65,11 @@ Cypress.Commands.add('children1', function () {
       .children('.active')
       .should('contain', 'Data');
   })
+
+  Cypress.Commands.add('closest1', function () {
+    cy
+      .contains('closest').click()
+      .get('.list-group-item')
+      .closest('ul')
+      .should('have.class', 'list-group');
+  })
