@@ -77,4 +77,9 @@ describe('Example', function () {
         cy
           .not1();
       })
+
+      it('parent', function () {
+        cy
+          .parent1()
+      })
   });
