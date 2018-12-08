@@ -52,4 +52,9 @@ describe('Example', function () {
         cy
           .first1();
       })
+
+      it('last', function () {
+        cy
+          .last1();
+      })
   });
