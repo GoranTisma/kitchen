@@ -115,3 +115,10 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-ul li')
     .first().next().should('contain', 'oranges');
   })
+
+  Cypress.Commands.add('nextall1', function () {
+    cy
+    .contains('nextAll').click()
+    .get('.traversal-next-all')
+    .contains('oranges').nextAll().should('have.length', 3);
+  })

@@ -62,4 +62,9 @@ describe('Example', function () {
         cy
           .next1();
       })
+
+      it('nextall', function () {
+        cy
+          .nextall1();
+      })
   });
