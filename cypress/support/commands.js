@@ -92,12 +92,19 @@ Cypress.Commands.add('children1', function () {
   Cypress.Commands.add('find1', function () {
     cy
     .contains('find').click()
-    .get('.pagination li').find('a').eq(2).should('contain', 2)
+    .get('.pagination li').find('a').eq(2).should('contain', 2);
   })
 
   Cypress.Commands.add('first1', function () {
     cy
     .contains('first').click()
     .get('.traversal-table th')
-    .first().should('contain', '#')
+    .first().should('contain', '#');
+  })
+
+  Cypress.Commands.add('last1', function () {
+    cy
+    .contains('last').click()
+    .get('.traversal-buttons .btn').last()
+    .should('have.value', 'Submit');
   })
