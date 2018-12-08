@@ -57,4 +57,9 @@ describe('Example', function () {
         cy
           .last1();
       })
+
+      it('next', function () {
+        cy
+          .next1();
+      })
   });

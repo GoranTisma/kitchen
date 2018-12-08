@@ -108,3 +108,10 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-buttons .btn').last()
     .should('have.value', 'Submit');
   })
+
+  Cypress.Commands.add('next1', function () {
+    cy
+    .contains('next').click()
+    .get('.traversal-ul li')
+    .first().next().should('contain', 'oranges');
+  })
