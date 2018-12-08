@@ -129,3 +129,10 @@ Cypress.Commands.add('children1', function () {
     .get('#veggies')
     .nextUntil('#nuts').should('have.length', 3);
   })
+
+  Cypress.Commands.add('not1', function () {
+    cy
+    .contains('not').click()
+    .get('.traversal-disabled .btn')
+    .not('[disabled]').should('contain', 'Button');
+  })

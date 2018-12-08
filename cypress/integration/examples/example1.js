@@ -72,4 +72,9 @@ describe('Example', function () {
         cy
           .nextuntil1();
       })
+
+      it('not', function () {
+        cy
+          .not1();
+      })
   });
