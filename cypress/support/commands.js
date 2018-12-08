@@ -88,3 +88,9 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-nav li')
     .filter('.active').should('contain', 'About');
   })
+
+  Cypress.Commands.add('find1', function () {
+    cy
+    .contains('find').click()
+    .get('.pagination li').find('a').eq(2).should('contain', 2)
+  })
