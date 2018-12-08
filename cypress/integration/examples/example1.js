@@ -67,4 +67,9 @@ describe('Example', function () {
         cy
           .nextall1();
       })
+
+      it('nextuntil', function () {
+        cy
+          .nextuntil1();
+      })
   });
