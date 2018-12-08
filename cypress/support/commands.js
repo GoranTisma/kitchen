@@ -122,3 +122,10 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-next-all')
     .contains('oranges').nextAll().should('have.length', 3);
   })
+
+  Cypress.Commands.add('nextuntil1', function () {
+    cy
+    .contains('nextUntil').click()
+    .get('#veggies')
+    .nextUntil('#nuts').should('have.length', 3);
+  })
