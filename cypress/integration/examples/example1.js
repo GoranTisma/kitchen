@@ -47,4 +47,9 @@ describe('Example', function () {
         cy
           .find1();
       })
+
+      it('first', function () {
+        cy
+          .first1();
+      })
   });

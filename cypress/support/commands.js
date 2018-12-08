@@ -94,3 +94,10 @@ Cypress.Commands.add('children1', function () {
     .contains('find').click()
     .get('.pagination li').find('a').eq(2).should('contain', 2)
   })
+
+  Cypress.Commands.add('first1', function () {
+    cy
+    .contains('first').click()
+    .get('.traversal-table th')
+    .first().should('contain', '#')
+  })
