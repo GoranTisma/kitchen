@@ -42,4 +42,9 @@ describe('Example', function () {
         cy
           .filter1();
       })
+
+      it('find', function () {
+        cy
+          .find1();
+      })
   });
