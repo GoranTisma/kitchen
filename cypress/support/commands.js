@@ -136,3 +136,10 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-disabled .btn')
     .not('[disabled]').should('contain', 'Button');
   })
+
+  Cypress.Commands.add('parent1', function () {
+    cy
+    .contains('parent').click()
+    .get('.traversal-mark')
+    .parent().should('contain', 'Morbi leo risus');
+  })
