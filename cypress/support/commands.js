@@ -143,3 +143,10 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-mark')
     .parent().should('contain', 'Morbi leo risus');
   })
+
+  Cypress.Commands.add('parents1', function () {
+    cy
+    .contains('parents').click()
+    .get('.traversal-cite')
+    .parents().should('match', 'blockquote');
+  })
