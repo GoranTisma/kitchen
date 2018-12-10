@@ -107,4 +107,10 @@ describe('Example', function () {
         cy
           .prevuntil1()
       })
+
+      it('siblings', function () {
+        cy
+          .siblings1()
+          
+      })
   });

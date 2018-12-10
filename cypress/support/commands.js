@@ -180,3 +180,11 @@ Cypress.Commands.add('children1', function () {
     .get('.foods-list').find('#nuts')
     .prevUntil('#veggies').should('have.length', 3);
   })
+
+  Cypress.Commands.add('siblings1', function () {
+    cy
+    .contains('siblings').click()
+    .get('.traversal-pills .active')
+    .siblings().should('have.length', 2);
+    
+  })
