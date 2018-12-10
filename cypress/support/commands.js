@@ -150,3 +150,13 @@ Cypress.Commands.add('children1', function () {
     .get('.traversal-cite')
     .parents().should('match', 'blockquote');
   })
+
+  Cypress.Commands.add('parentsuntil1', function () {
+    cy
+    .contains('parentsUntil').click()
+    .get('.clothes-nav')
+    .find('.active')
+    .parentsUntil('.clothes-nav')
+    .should('have.length', 2);
+    
+  })

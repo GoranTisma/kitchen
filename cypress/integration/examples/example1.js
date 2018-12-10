@@ -87,4 +87,9 @@ describe('Example', function () {
         cy
           .parents1()
       })
+
+      it('parentsuntil', function () {
+        cy
+          .parentsuntil1()
+      })
   });
