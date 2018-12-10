@@ -158,5 +158,11 @@ Cypress.Commands.add('children1', function () {
     .find('.active')
     .parentsUntil('.clothes-nav')
     .should('have.length', 2);
-    
+  })
+
+  Cypress.Commands.add('prev1', function () {
+    cy
+    .contains('prev').click()
+    .get('.birds li').eq(2)
+    .prev().should('contain', 'Lorikeets');
   })

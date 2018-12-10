@@ -92,4 +92,9 @@ describe('Example', function () {
         cy
           .parentsuntil1()
       })
+
+      it('prev', function () {
+        cy
+          .prev1()
+      })
   });
