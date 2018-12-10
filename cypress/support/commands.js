@@ -158,4 +158,5 @@ Cypress.Commands.add('children1', function () {
     .find('.active')
     .parentsUntil('.clothes-nav')
     .should('have.length', 2);
+    
   })
