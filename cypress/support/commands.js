@@ -186,5 +186,15 @@ Cypress.Commands.add('children1', function () {
     .contains('siblings').click()
     .get('.traversal-pills .active')
     .siblings().should('have.length', 2);
-    
+  })
+
+  Cypress.Commands.add('type1', function () {
+    cy
+    .contains('type').click()
+    .get('.action-email')
+    .type('fake@email.com', { delay: 200 }).should('have.value', 'fake@email.com')
+    .type('{del}{selectall}{backspace}')
+    .get('.action-disabled')
+    .type('disabled error checking', { force: true })
+    .should('have.value', 'disabled error checking');
   })

@@ -111,6 +111,10 @@ describe('Example', function () {
       it('siblings', function () {
         cy
           .siblings1()
-          
+      })
+
+      it('type', function () {
+        cy
+          .type1()
       })
   });
