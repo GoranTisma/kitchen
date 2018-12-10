@@ -117,4 +117,9 @@ describe('Example', function () {
         cy
           .type1()
       })
+
+      it('focus', function () {
+        cy
+          .focus1()
+      })
   });
