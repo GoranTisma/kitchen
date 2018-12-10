@@ -166,3 +166,10 @@ Cypress.Commands.add('children1', function () {
     .get('.birds li').eq(2)
     .prev().should('contain', 'Lorikeets');
   })
+
+  Cypress.Commands.add('prevall1', function () {
+    cy
+    .contains('prevAll').click()
+    .get('.fruits-list').find('.third')
+    .prevAll().should('have.length', 2);
+  })
