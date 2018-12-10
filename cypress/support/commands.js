@@ -186,4 +186,5 @@ Cypress.Commands.add('children1', function () {
     .contains('siblings').click()
     .get('.traversal-pills .active')
     .siblings().should('have.length', 2);
+    
   })
