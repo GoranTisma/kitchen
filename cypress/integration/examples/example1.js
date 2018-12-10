@@ -97,4 +97,9 @@ describe('Example', function () {
         cy
           .prev1()
       })
+
+      it('prevall', function () {
+        cy
+          .prevall1()
+      })
   });
