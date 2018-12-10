@@ -82,4 +82,9 @@ describe('Example', function () {
         cy
           .parent1()
       })
+
+      it('parents', function () {
+        cy
+          .parents1()
+      })
   });
