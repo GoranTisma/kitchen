@@ -198,3 +198,11 @@ Cypress.Commands.add('children1', function () {
     .type('disabled error checking', { force: true })
     .should('have.value', 'disabled error checking');
   })
+
+  Cypress.Commands.add('focus1', function () {
+    cy
+    .contains('focus').click()
+    .get('.action-focus').focus()
+    .should('have.class', 'focus')
+    .type('message');
+  })
