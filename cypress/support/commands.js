@@ -173,3 +173,10 @@ Cypress.Commands.add('children1', function () {
     .get('.fruits-list').find('.third')
     .prevAll().should('have.length', 2);
   })
+
+  Cypress.Commands.add('prevuntil1', function () {
+    cy
+    .contains('prevUntil').click()
+    .get('.foods-list').find('#nuts')
+    .prevUntil('#veggies').should('have.length', 3);
+  })

@@ -102,4 +102,9 @@ describe('Example', function () {
         cy
           .prevall1()
       })
+
+      it('prevuntil', function () {
+        cy
+          .prevuntil1()
+      })
   });
