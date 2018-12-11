@@ -147,4 +147,9 @@ describe('Example', function () {
         cy
           .dblclick1()
       })
+
+      it('check', function () {
+        cy
+          .check1()
+      })
   });
