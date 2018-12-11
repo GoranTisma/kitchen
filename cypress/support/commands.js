@@ -256,3 +256,14 @@ Cypress.Commands.add('children1', function () {
     .get('.action-div').dblclick().should('not.be.visible')
     .get('.action-input-hidden').should('be.visible');
   })
+
+  Cypress.Commands.add('check1', function () {
+    cy
+    .contains('check').click()
+    .get('.action-checkboxes [type="checkbox"]').not('[disabled]')
+    .check()
+    .get('.action-radios [type="radio"]').not('[disabled]')
+    .check()
+    .get('.action-multiple-checkboxes [type="checkbox"]')
+    .check(['checkbox1', 'checkbox2']);
+  })
