@@ -206,3 +206,11 @@ Cypress.Commands.add('children1', function () {
     .should('have.class', 'focus')
     .type('message');
   })
+
+  Cypress.Commands.add('blur1', function () {
+    cy
+    .contains('blur').click()
+    .get('.action-blur').type('About to blur').blur()
+    .should('have.class', 'error')
+    .prev().should('have.attr', 'style', 'color: red;');
+  })
