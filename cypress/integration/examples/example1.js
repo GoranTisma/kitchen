@@ -142,4 +142,9 @@ describe('Example', function () {
         cy
           .click1()
       })
+
+      it('dblclick', function () {
+        cy
+          .dblclick1()
+      })
   });
