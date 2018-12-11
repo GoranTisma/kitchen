@@ -232,3 +232,20 @@ Cypress.Commands.add('children1', function () {
     .get('.action-form').submit()
     .next().should('contain', 'Your form has been submitted!');
   })
+
+  Cypress.Commands.add('click1', function () {
+    cy
+    .get(".dropdown-toggle").click()
+    .get(".dropdown-menu li").eq(2).click()
+    .get('.action-btn').click()
+    .get('#action-canvas').click('topLeft')
+    .get('#action-canvas').click('top')
+    .get('#action-canvas').click('topRight')
+    .get('#action-canvas').click()
+    .get('#action-canvas').click('left')
+    .get('#action-canvas').click('right')
+    .get('#action-canvas').click('bottomLeft')
+    .get('#action-canvas').click('bottom')
+    .get('#action-canvas').click('bottomRight')
+    .get('.action-labels>.label').click({ multiple: true });
+  })
