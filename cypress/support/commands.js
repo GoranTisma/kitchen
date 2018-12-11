@@ -214,3 +214,12 @@ Cypress.Commands.add('children1', function () {
     .should('have.class', 'error')
     .prev().should('have.attr', 'style', 'color: red;');
   })
+
+  Cypress.Commands.add('clear1', function () {
+    cy
+    .contains('clear').click()
+    .get('.action-clear').type('Clear this text')
+    .should('have.value', 'Clear this text')
+    .clear()
+    .should('have.value', '');
+  })

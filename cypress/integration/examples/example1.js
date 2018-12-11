@@ -127,4 +127,9 @@ describe('Example', function () {
         cy
           .blur1()
       })
+
+      it('clear', function () {
+        cy
+          .clear1()
+      })
   });
