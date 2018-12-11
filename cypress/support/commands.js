@@ -223,3 +223,12 @@ Cypress.Commands.add('children1', function () {
     .clear()
     .should('have.value', '');
   })
+
+  Cypress.Commands.add('submit1', function () {
+    cy
+    .contains('submit').click()
+    .get('.action-form')
+    .find('.form-control').type('HALFOFF')
+    .get('.action-form').submit()
+    .next().should('contain', 'Your form has been submitted!');
+  })
