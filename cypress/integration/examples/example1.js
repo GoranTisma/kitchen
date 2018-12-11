@@ -137,4 +137,9 @@ describe('Example', function () {
         cy
           .submit1()
       })
+
+      it('click', function () {
+        cy
+          .click1()
+      })
   });
