@@ -249,3 +249,10 @@ Cypress.Commands.add('children1', function () {
     .get('#action-canvas').click('bottomRight')
     .get('.action-labels>.label').click({ multiple: true });
   })
+
+  Cypress.Commands.add('dblclick1', function () {
+    cy
+    .contains('dblclick').click()
+    .get('.action-div').dblclick().should('not.be.visible')
+    .get('.action-input-hidden').should('be.visible');
+  })
