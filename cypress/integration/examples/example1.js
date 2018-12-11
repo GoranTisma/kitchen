@@ -122,4 +122,9 @@ describe('Example', function () {
         cy
           .focus1()
       })
+
+      it('blur', function () {
+        cy
+          .blur1()
+      })
   });
