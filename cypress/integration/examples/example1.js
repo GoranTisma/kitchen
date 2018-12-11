@@ -132,4 +132,9 @@ describe('Example', function () {
         cy
           .clear1()
       })
+
+      it('submit', function () {
+        cy
+          .submit1()
+      })
   });
