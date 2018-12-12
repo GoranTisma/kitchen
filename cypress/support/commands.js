@@ -267,3 +267,12 @@ Cypress.Commands.add('children1', function () {
     .get('.action-multiple-checkboxes [type="checkbox"]')
     .check(['checkbox1', 'checkbox2']);
   })
+
+  Cypress.Commands.add('uncheck1', function () {
+    cy
+    .contains('uncheck').click()
+    .get('.action-check [type="checkbox"]')
+    .not('[disabled]').uncheck()
+    .get('.action-check [disabled]')
+    .uncheck({ force: true });
+  })
