@@ -294,3 +294,16 @@ Cypress.Commands.add('children1', function () {
     .get('input[type=range]').siblings('p')
     .should('have.text', '67');
   })
+
+  Cypress.Commands.add('window1', function () {
+    cy
+    .contains('window').click()
+    .window().should('have.property', 'top');
+  })
+
+  Cypress.Commands.add('document1', function () {
+    cy
+    .get(".dropdown-toggle").click()
+    .get(".dropdown-menu li").eq(3).click().document()
+    .should('have.property', 'charset').and('eq', 'UTF-8');
+  })

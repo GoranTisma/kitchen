@@ -177,4 +177,14 @@ describe('Example', function () {
         cy
           .trigger1()
       })
+
+      it('window', function () {
+        cy
+          .window1()
+      })
+
+      it('document', function () {
+        cy
+          .document1()
+      })
   });
