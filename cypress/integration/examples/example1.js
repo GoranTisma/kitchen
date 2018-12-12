@@ -172,4 +172,9 @@ describe('Example', function () {
         cy
           .scrollto1()
       })
+
+      it('trigger', function () {
+        cy
+          .trigger1()
+      })
   });

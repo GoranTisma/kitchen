@@ -286,11 +286,11 @@ Cypress.Commands.add('children1', function () {
     cy.get('.action-select').select('fr-bananas');
   })
 
-  Cypress.Commands.add('scrollto1', function () {
+  Cypress.Commands.add('trigger1', function () {
     cy
-    .contains('scrollTo').click()
-    .get('#scrollable-horizontal').scrollTo('right')
-    .get('#scrollable-vertical').scrollTo(250, 250)
-    .get('#scrollable-vertical').scrollTo('center', { easing: 'linear' })
-    .get('#scrollable-both').scrollTo('center', { duration: 2000 });
+    .contains('trigger').click()
+    .get('.trigger-input-range')
+    .invoke('val', 67).trigger('change')
+    .get('input[type=range]').siblings('p')
+    .should('have.text', '67');
   })
