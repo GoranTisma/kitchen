@@ -276,3 +276,12 @@ Cypress.Commands.add('children1', function () {
     .get('.action-check [disabled]')
     .uncheck({ force: true });
   })
+
+  Cypress.Commands.add('select1', function () {
+    cy
+    .contains('select').click()
+    .get('.action-select').select('apples')
+    .get('.action-select-multiple')
+    .select(['apples', 'oranges', 'bananas'])
+    cy.get('.action-select').select('fr-bananas');
+  })
