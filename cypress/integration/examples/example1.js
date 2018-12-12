@@ -163,7 +163,7 @@ describe('Example', function () {
           .select1()
       })
 
-      it.only('scrollintoview', function () {
+      it('scrollintoview', function () {
         cy
           .scrollintoview1()
       })

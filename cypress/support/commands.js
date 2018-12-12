@@ -291,5 +291,5 @@ Cypress.Commands.add('children1', function () {
     .contains('scrollIntoView').click()
     .get('#scroll-horizontal button').scrollIntoView()
     .get('#scroll-vertical button').scrollIntoView()
-    .get('#scroll-both button').scrollIntoView();
+    .get('#scroll-both button').scrollIntoView().should('be.visible');
   })
