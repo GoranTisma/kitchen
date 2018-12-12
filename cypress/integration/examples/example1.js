@@ -152,4 +152,9 @@ describe('Example', function () {
         cy
           .check1()
       })
+
+      it('uncheck', function () {
+        cy
+          .uncheck1()
+      })
   });
