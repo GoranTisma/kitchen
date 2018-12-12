@@ -167,4 +167,9 @@ describe('Example', function () {
         cy
           .scrollintoview1()
       })
+
+      it('scrollto', function () {
+        cy
+          .scrollto1()
+      })
   });

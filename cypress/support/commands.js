@@ -286,10 +286,11 @@ Cypress.Commands.add('children1', function () {
     cy.get('.action-select').select('fr-bananas');
   })
 
-  Cypress.Commands.add('scrollintoview1', function () {
+  Cypress.Commands.add('scrollto1', function () {
     cy
-    .contains('scrollIntoView').click()
-    .get('#scroll-horizontal button').scrollIntoView()
-    .get('#scroll-vertical button').scrollIntoView()
-    .get('#scroll-both button').scrollIntoView().should('be.visible');
+    .contains('scrollTo').click()
+    .get('#scrollable-horizontal').scrollTo('right')
+    .get('#scrollable-vertical').scrollTo(250, 250)
+    .get('#scrollable-vertical').scrollTo('center', { easing: 'linear' })
+    .get('#scrollable-both').scrollTo('center', { duration: 2000 });
   })
