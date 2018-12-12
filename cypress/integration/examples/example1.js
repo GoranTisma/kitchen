@@ -157,4 +157,9 @@ describe('Example', function () {
         cy
           .uncheck1()
       })
+
+      it('select', function () {
+        cy
+          .select1()
+      })
   });
