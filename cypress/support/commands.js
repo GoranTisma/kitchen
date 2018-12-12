@@ -307,3 +307,9 @@ Cypress.Commands.add('children1', function () {
     .get(".dropdown-menu li").eq(3).click().document()
     .should('have.property', 'charset').and('eq', 'UTF-8');
   })
+
+  Cypress.Commands.add('title1', function () {
+    cy
+    .contains('title').click()
+    .title().should('include', 'Kitchen Sink');
+  })

@@ -187,4 +187,9 @@ describe('Example', function () {
         cy
           .document1()
       })
+
+      it('title', function () {
+        cy
+          .title1()
+      })
   });
