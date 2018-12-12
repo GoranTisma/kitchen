@@ -285,3 +285,11 @@ Cypress.Commands.add('children1', function () {
     .select(['apples', 'oranges', 'bananas'])
     cy.get('.action-select').select('fr-bananas');
   })
+
+  Cypress.Commands.add('scrollintoview1', function () {
+    cy
+    .contains('scrollIntoView').click()
+    .get('#scroll-horizontal button').scrollIntoView()
+    .get('#scroll-vertical button').scrollIntoView()
+    .get('#scroll-both button').scrollIntoView().should('be.visible');
+  })

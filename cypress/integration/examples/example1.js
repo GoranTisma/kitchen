@@ -162,4 +162,9 @@ describe('Example', function () {
         cy
           .select1()
       })
+
+      it('scrollintoview', function () {
+        cy
+          .scrollintoview1()
+      })
   });
