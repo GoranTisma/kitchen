@@ -313,3 +313,30 @@ Cypress.Commands.add('children1', function () {
     .contains('title').click()
     .title().should('include', 'Kitchen Sink');
   })
+
+  Cypress.Commands.add('viewport1', function () {
+    cy
+    .contains('viewport').click()
+    .get('#navbar').should('be.visible')
+    .viewport(320, 480)
+    .viewport(900, 900)
+    .viewport('macbook-15')
+    .wait(200)
+    .viewport('macbook-13')
+    .wait(200)
+    .viewport('macbook-11')
+    .wait(200)
+    .viewport('ipad-2')
+    .wait(200)
+    .viewport('ipad-mini')
+    .wait(200)
+    .viewport('iphone-6+')
+    .wait(200)
+    .viewport('iphone-6')
+    .wait(200)   
+    .viewport('iphone-5')
+    .wait(200)
+    .viewport('iphone-4')
+    .wait(200)
+    .viewport('iphone-3');
+  })
