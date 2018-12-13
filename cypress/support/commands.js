@@ -286,6 +286,24 @@ Cypress.Commands.add('select1', function () {
     cy.get('.action-select').select('fr-bananas');
   })
 
+Cypress.Commands.add('scrollintoview1', function () {
+    cy
+    .contains('scrollIntoView').click()
+    .get('#scroll-horizontal button').scrollIntoView()
+    .should('be.visible')
+    .get('#scroll-vertical button').scrollIntoView()
+    .should('be.visible')
+    .get('#scroll-both button').scrollIntoView()
+    .should('be.visible');
+  })
+
+Cypress.Commands.add('scrollto1', function () {
+    cy
+    .contains('scrollTo').click()
+    .get('#scrollable-horizontal').scrollTo('right')
+    .get('#scrollable-vertical').scrollTo(250, 250)
+    .get('#scrollable-both').scrollTo('75%', '25%');
+  })
 Cypress.Commands.add('trigger1', function () {
     cy
     .contains('trigger').click()
@@ -385,7 +403,7 @@ Cypress.Commands.add('reload1', function () {
     .reload();
   })
 
-  Cypress.Commands.add('visit1', function () {
+Cypress.Commands.add('visit1', function () {
     cy
     .contains('visit').click()
     .visit('http://localhost:8080/commands/location')
@@ -393,4 +411,20 @@ Cypress.Commands.add('reload1', function () {
     .go(-2);
   })
 
-  
+Cypress.Commands.add('should1', function () {
+    cy
+    .get(".dropdown-toggle").click()
+    .get(".dropdown-menu li").eq(7).click()
+    .get('.assertion-table')
+    .find('tbody tr:last').should('have.class', 'success');
+  })
+
+Cypress.Commands.add('and1', function () {
+    cy
+    .get(".dropdown-toggle").click()
+    .get(".dropdown-menu li").eq(7).click()
+    .get('.assertions-link')
+    .should('have.class', 'active')
+    .and('have.attr', 'href')
+    .and('include', 'cypress.io');
+  })
