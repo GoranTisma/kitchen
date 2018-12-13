@@ -192,4 +192,9 @@ describe('Example', function () {
         cy
           .title1()
       })
+
+      it('viewport', function () {
+        cy
+          .viewport1()
+      })
   });
