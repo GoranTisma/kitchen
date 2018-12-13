@@ -212,4 +212,19 @@ describe('Example', function () {
         cy
           .url1()
       })
+
+      it('go', function () {
+        cy
+          .go1()
+      })
+
+      it('reload', function () {
+        cy
+          .reload1()
+      })
+
+      it('visit', function () {
+        cy
+          .visit1()
+      })
   });
