@@ -237,4 +237,24 @@ describe('Example', function () {
         cy
           .and1()
       })
+
+      it('end', function () {
+        cy
+          .end1()
+      })
+
+      it('focused', function () {
+        cy
+          .focused1()
+      })
+
+      it('screenshot', function () {
+        cy
+          .screenshot1()
+      })
+
+      it('wrap', function () {
+        cy
+          .wrap1()
+      })
   });

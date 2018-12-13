@@ -428,3 +428,34 @@ Cypress.Commands.add('and1', function () {
     .and('have.attr', 'href')
     .and('include', 'cypress.io');
   })
+
+Cypress.Commands.add('end1', function () {
+    cy
+    .contains('end').click()
+    .get('.misc-table').within(() => {
+      cy.contains('Cheryl').click().end()
+    });
+  })
+
+Cypress.Commands.add('focused1', function () {
+    cy
+    .contains('focused').click()
+    .get('.misc-form').find('#name').click()
+    .focused().should('have.id', 'name').type('goran')
+    .get('.misc-form').find('#description').click()
+    .focused().should('have.id', 'description').type('opis');
+  })
+
+Cypress.Commands.add('screenshot1', function () {
+    cy
+    .contains('screenshot').click();
+    //.screenshot('my-image');
+  })
+
+Cypress.Commands.add('wrap1', function () {
+    cy
+    .contains('wrap').click()
+    .wrap({foo: 'bar'})
+    .should('have.property', 'foo')
+    .and('include', 'bar');
+  })
