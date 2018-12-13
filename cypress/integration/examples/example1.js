@@ -197,4 +197,19 @@ describe('Example', function () {
         cy
           .viewport1()
       })
+
+      it('hash', function () {
+        cy
+          .hash1()
+      })
+
+      it('location', function () {
+        cy
+          .location1()
+      })
+
+      it('url', function () {
+        cy
+          .url1()
+      })
   });
