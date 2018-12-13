@@ -340,3 +340,33 @@ Cypress.Commands.add('children1', function () {
     .wait(200)
     .viewport('iphone-3');
   })
+
+  
+  Cypress.Commands.add('hash1', function () {
+    cy
+    .contains('hash').click()
+    .hash().should('be.empty');
+  })
+
+  Cypress.Commands.add('location1', function () {
+    cy
+    .contains('location').click()
+    .location().should((location) => {
+      expect(location.hash).to.be.empty
+      expect(location.href).to.eq('http://localhost:8080/commands/location')
+      expect(location.host).to.eq('localhost:8080')
+      expect(location.hostname).to.eq('localhost')
+      expect(location.origin).to.eq('http://localhost:8080')
+      expect(location.pathname).to.eq('/commands/location')
+      expect(location.port).to.eq('8080')
+      expect(location.protocol).to.eq('http:')
+      expect(location.search).to.be.empty
+    });
+  })
+
+    Cypress.Commands.add('url1', function () {
+      cy
+      .contains('url').click()
+      .url().should('eq', 'http://localhost:8080/commands/location');
+    })
+  
