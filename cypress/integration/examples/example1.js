@@ -227,4 +227,14 @@ describe('Example', function () {
         cy
           .visit1()
       })
+
+      it('should', function () {
+        cy
+          .should1()
+      })
+
+      it('and', function () {
+        cy
+          .and1()
+      })
   });
