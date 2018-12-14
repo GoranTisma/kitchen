@@ -257,4 +257,29 @@ describe('Example', function () {
         cy
           .wrap1()
       })
+
+      it('each', function () {
+        cy
+          .each1()
+      })
+
+      it('its', function () {
+        cy
+          .its1()
+      })
+
+      it('invoke', function () {
+        cy
+          .invoke1()
+      })
+
+      it('spread', function () {
+        cy
+          .spread1()
+      })
+
+      it('then', function () {
+        cy
+          .then1()
+      })
   });
