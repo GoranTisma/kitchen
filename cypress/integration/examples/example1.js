@@ -282,4 +282,29 @@ describe('Example', function () {
         cy
           .then1()
       })
+
+      it('as', function () {
+        cy
+          .as1()
+      })
+
+      it('wait', function () {
+        cy
+          .wait1()
+      })
+
+      it('server', function () {
+        cy
+          .server1()
+      })
+
+      it('request', function () {
+        cy
+          .request1()
+      })
+
+      it('route', function () {
+        cy
+          .route1()
+      })
   });
