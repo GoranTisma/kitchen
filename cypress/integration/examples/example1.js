@@ -332,4 +332,24 @@ describe('Example', function () {
         cy
           .cookies1()
       })
+
+      it('spy', function () {
+        cy
+          .spy1()
+      })
+
+      it('stub', function () {
+        cy
+          .stub1()
+      })
+
+      it('clock', function () {
+        cy
+          .clock1()
+      })
+
+      it('tick', function () {
+        cy
+          .tick1()
+      })
   });

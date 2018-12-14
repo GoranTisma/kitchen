@@ -590,3 +590,21 @@ Cypress.Commands.add('cookies1', function () {
     .clearCookie('token').should('be.null');
   })
 
+Cypress.Commands.add('spy1', function () {
+    cy
+    .contains('spy').click();
+    //???
+  })
+
+Cypress.Commands.add('clock1', function () {
+    cy
+    .contains('clock').click();
+    //???
+  })
+
+Cypress.Commands.add('tick1', function () {
+    cy
+    .contains('tick').click();
+    //???
+  })
+
