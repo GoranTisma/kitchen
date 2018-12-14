@@ -501,3 +501,41 @@ Cypress.Commands.add('then1', function () {
       expect($lis.eq(2)).to.contain('Write JavaScript')
     });
   })
+
+Cypress.Commands.add('as1', function () {
+    cy
+    .contains('Aliasing').click({force: true})
+    .get('.as-table')
+    .find('tbody>tr').first()
+    .find('td').first()
+    .find('button').as('firstBtn')
+    .get('@firstBtn').click();
+  })
+
+Cypress.Commands.add('server1', function () {
+    cy
+    .contains('server').click()
+    .server().should((server) => {
+      expect(server.delay).to.eq(0)
+      expect(server.method).to.eq('GET')
+      expect(server.status).to.eq(200)
+      expect(server.headers).to.be.null
+      expect(server.response).to.be.null
+      expect(server.onRequest).to.be.undefined
+      expect(server.onResponse).to.be.undefined
+      expect(server.onAbort).to.be.undefined
+    });
+  })
+
+Cypress.Commands.add('request1', function () {
+    cy
+    .get(".dropdown-toggle").click()
+    .get(".dropdown-menu li").eq(12).click();
+    //???
+  })
+
+Cypress.Commands.add('route1', function () {
+    cy
+    .contains('route').click();
+    //???
+  })
