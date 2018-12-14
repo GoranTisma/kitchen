@@ -557,6 +557,12 @@ Cypress.Commands.add('fixture1', function () {
     //???
   })
 
+Cypress.Commands.add('readfile1', function () {
+    cy
+    .contains('Files').click({force: true});
+    //???
+  })
+
 Cypress.Commands.add('writefile1', function () {
     cy
     .contains('Files').click({force: true});
@@ -592,19 +598,25 @@ Cypress.Commands.add('cookies1', function () {
 
 Cypress.Commands.add('spy1', function () {
     cy
-    .contains('spy').click();
-    //???
+    .contains('spy').click()
+    
+  })
+
+Cypress.Commands.add('stub1', function () {
+    cy
+    .contains('stub').click()
+    
   })
 
 Cypress.Commands.add('clock1', function () {
     cy
-    .contains('clock').click();
-    //???
+    .contains('clock').click()
+    
   })
 
 Cypress.Commands.add('tick1', function () {
     cy
-    .contains('tick').click();
-    //???
+    .contains('tick').click()
+    
   })
 
