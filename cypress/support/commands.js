@@ -512,6 +512,17 @@ Cypress.Commands.add('as1', function () {
     .get('@firstBtn').click();
   })
 
+Cypress.Commands.add('wait1', function () {
+    cy
+    .contains('wait').click()
+    .get('.wait-input1').type('Wait 1000ms after typing')
+    .wait(1000)
+    .get('.wait-input2').type('Wait 1000ms after typing')
+    .wait(1000)
+    .get('.wait-input3').type('Wait 1000ms after typing')
+    .wait(1000);
+  })
+
 Cypress.Commands.add('server1', function () {
     cy
     .contains('server').click()
@@ -539,3 +550,43 @@ Cypress.Commands.add('route1', function () {
     .contains('route').click();
     //???
   })
+
+Cypress.Commands.add('fixture1', function () {
+    cy
+    .contains('Files').click({force: true});
+    //???
+  })
+
+Cypress.Commands.add('writefile1', function () {
+    cy
+    .contains('Files').click({force: true});
+    //???
+  })
+
+Cypress.Commands.add('CLS1', function () {
+    cy
+    .contains('Local Storage').click({force: true});
+    //???
+  })
+
+Cypress.Commands.add('cookies1', function () {
+    cy
+    .contains('Cookies').click({force: true})
+    .get('#getCookie .set-a-cookie').click()
+    .getCookie('token').should('have.property', 'value', '123ABC')
+    .get('#getCookies .set-a-cookie').click()
+    .getCookies().should('have.length', 1).should((cookies) => {
+      expect(cookies[0]).to.have.property('name', 'token')
+      expect(cookies[0]).to.have.property('value', '123ABC')
+      expect(cookies[0]).to.have.property('httpOnly', false)
+      expect(cookies[0]).to.have.property('secure', false)
+      expect(cookies[0]).to.have.property('domain')
+      expect(cookies[0]).to.have.property('path')
+    })
+    .setCookie('foo', 'bar')
+    .getCookie('foo').should('have.property', 'value', 'bar')
+    .get('#clearCookie .set-a-cookie').click()
+    .getCookie('token').should('have.property', 'value', '123ABC')
+    .clearCookie('token').should('be.null');
+  })
+

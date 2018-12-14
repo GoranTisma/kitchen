@@ -307,4 +307,29 @@ describe('Example', function () {
         cy
           .route1()
       })
+
+      it('fixture', function () {
+        cy
+          .fixture1()
+      })
+
+      it('readfile', function () {
+        cy
+          .readfile1()
+      })
+
+      it('writefile', function () {
+        cy
+          .writefile1()
+      })
+
+      it('CLS', function () {
+        cy
+          .CLS1()
+      })
+
+      it('cookies', function () {
+        cy
+          .cookies1()
+      })
   });
