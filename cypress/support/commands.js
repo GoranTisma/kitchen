@@ -459,3 +459,45 @@ Cypress.Commands.add('wrap1', function () {
     .should('have.property', 'foo')
     .and('include', 'bar');
   })
+
+Cypress.Commands.add('each1', function () {
+    cy
+    .contains('each').click()
+    .get('.connectors-each-ul li')
+    .each(function($el, index, $list){
+      console.log($el, index, $list)
+  });
+  })
+
+Cypress.Commands.add('its1', function () {
+    cy
+    .contains('its').click()
+    .get('.connectors-its-ul>li')
+    .its('length')
+    .should('be.gt', 2);
+  })
+
+Cypress.Commands.add('invoke1', function () {
+    cy
+    .contains('invoke').click()
+    .get('.connectors-div').should('be.hidden')
+    .invoke('show')
+    .should('be.visible');
+  })
+
+Cypress.Commands.add('spread1', function () {
+    cy
+    .contains('spread').click();
+    //???
+  })
+
+Cypress.Commands.add('then1', function () {
+    cy
+    .contains('then').click()
+    .get('.connectors-list>li').then(function($lis){
+      expect($lis).to.have.length(3)
+      expect($lis.eq(0)).to.contain('Walk the dog')
+      expect($lis.eq(1)).to.contain('Feed the cat')
+      expect($lis.eq(2)).to.contain('Write JavaScript')
+    });
+  })
